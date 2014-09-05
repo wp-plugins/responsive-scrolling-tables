@@ -2,7 +2,7 @@
 /*
 Plugin Name: Responsive Scrolling Tables
 Description: RST detects when tables are bigger then their containers and makes them scroll instead of flowing over the boundary of the container.
-Version: 1.0.0
+Version: 1.1.0
 Author: T J Dixon Limited
 Author URI: http://www.tjdixon.com/
 Plugin URI: http://www.tjdixon.com/
@@ -18,9 +18,6 @@ function addRSTJS()
 		plugins_url('/js/responsivescrollingtables.js', __FILE__)
 	);
 }
-echo __FILE__;
-
-//add_action('wp_enqueue_scripts', addRSTJS());
 
 add_action('wp_head', 'addRSTJS');
 ?>
