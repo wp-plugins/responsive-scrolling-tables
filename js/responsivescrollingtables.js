@@ -5,10 +5,10 @@
  * @license     Licensed under the GNU GPLv3 http://www.gnu.org/licenses/gpl.html or later
  */
 
-function responsiveTables() 
+function responsiveTables()
 {
     var tables = document.querySelectorAll("table");
-    for (var i = 0; i < tables.length; i++) 
+    for (var i = 0; i < tables.length; i++)
 	{
         if (tables[i].scrollWidth > tables[i].parentNode.clientWidth && (tables[i].parentNode.tagName.toLowerCase() != "div" || tables[i].parentNode.getAttribute("data-responsive") != "res-div"))
 		{
@@ -30,8 +30,4 @@ function responsiveTables()
 
 window.addEventListener('resize', function (e) { responsiveTables(); });
 
-document.onreadystatechange = function () {
-    if (document.readyState == 'complete') {
-        responsiveTables();
-    }
-};
+document.addEventListener("DOMContentLoaded", function () { responsiveTables(); });

@@ -56,6 +56,9 @@ The first step is to make sure that you have activated the Responsive Scrolling 
 
 == Changelog ==
 
+= 1.2.1 =
+* Moved from overriding the document.onreadystatechange to using document.addEventListener
+
 = 1.2.0 =
 * Changed to use wp_enqueue_script
 
@@ -66,6 +69,9 @@ The first step is to make sure that you have activated the Responsive Scrolling 
 * Initial release of RST
 
 == Upgrade Notice ==
+
+= 1.2.1 =
+Small change to use an event listener, resolves issues with other javascript not playing nice.
 
 = 1.2.0 =
 Updating to this version will fix errors about head already being sent/changed (essential if experiencing issues with other plugins).
